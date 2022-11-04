@@ -9,6 +9,20 @@ export interface MyLabelProps {
 	 * Custom Font size applied to the label
 	 */
 	size?: 'normal' | 'h1' | 'h2' | 'h3';
+	/**
+	 * Capitalize all letters
+	 */
+	allCaps?: boolean;
+	/**
+	 * Change text color
+	 */
+	color?: 'primary' | 'secondary' | 'tertiary';
+
+	/**
+	 * Adds a color to the font
+	 */
+
+	fontColor?: string;
 }
 
 /**
@@ -16,7 +30,20 @@ export interface MyLabelProps {
  */
 export const MyLabel = ({
 	label = 'No Label',
-	size = 'normal'
+	size = 'normal',
+	allCaps = false,
+	color = 'primary',
+	fontColor
 }: MyLabelProps) => {
-	return <span className={`${size}`}>{label}</span>;
+	return (
+		<span
+			className={`${[size, `text-${color}`].join(' ')}`}
+			style={{
+				textTransform: allCaps ? 'uppercase' : 'none',
+				color: fontColor || ''
+			}}
+		>
+			{label}
+		</span>
+	);
 };

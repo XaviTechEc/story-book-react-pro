@@ -1,0 +1,27 @@
+.storybook-mychip {
+	padding: 0.5rem 1.5rem;
+	border-radius: 20rem;
+}
+
+.storybook-mychip--sm {
+	font-size: 1rem;
+}
+
+.storybook-mychip--md {
+	font-size: 1.5rem;
+}
+
+.storybook-mychip--lg {
+	font-size: 2rem;
+}
+
+.storybook-mychip--filled {
+	background-color: #333;
+	color: #eee;
+}
+
+.storybook-mychip--outlined {
+	background-color: #eee;
+	color: #333;
+	border: 1px solid #333;
+}
