@@ -6,6 +6,7 @@ export type MyChipProps = {
 	label: string;
 	size?: 'sm' | 'md' | 'lg';
 	variant?: 'filled' | 'outlined';
+	color?: 'success' | 'error';
 };
 
 export const MyChip: FC<MyChipProps> = ({
