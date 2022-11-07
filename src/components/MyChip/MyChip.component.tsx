@@ -26,3 +26,5 @@ export const MyChip: FC<MyChipProps> = ({
 		</span>
 	);
 };
+
+export default MyChip;
